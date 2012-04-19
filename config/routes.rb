@@ -1,4 +1,6 @@
 NAMEThisApp::Application.routes.draw do
+  resources :products
+
   devise_for :users
   get 'echo/hello'
   # The priority is based upon order of creation:

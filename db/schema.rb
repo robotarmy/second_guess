@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120419165945) do
+ActiveRecord::Schema.define(:version => 20120419184250) do
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "creator_user_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "products", ["creator_user_id"], :name => "index_products_on_creator_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
