@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120419184250) do
+ActiveRecord::Schema.define(:version => 20120419185149) do
 
   create_table "products", :force => true do |t|
     t.string   "name"
@@ -36,9 +36,21 @@ ActiveRecord::Schema.define(:version => 20120419184250) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "avatar_url"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "votes", :force => true do |t|
+    t.integer  "product_id"
+    t.integer  "user_id"
+    t.integer  "value"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "votes", ["product_id"], :name => "index_votes_on_product_id"
+  add_index "votes", ["user_id"], :name => "index_votes_on_user_id"
 
 end
