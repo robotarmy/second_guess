@@ -21,8 +21,8 @@
           <a class="brand" href="index.html">ur.<span>prod!c</span></a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="create.html">Create</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li class="active"><a href="create.html">Create</a></li>
               <li><a href="auth.html">Auth</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -32,44 +32,30 @@
 
 
     <div class="container">
-
-      <h1>Recent <span class="brand">Prod!cs</span></h1>
-      
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th class="created">Created</th>
-            <th class="name">Product Name</th>
-            <th class="actions">&nbsp;</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>12/20/2012 2:30pm</td>
-            <td><a href="details.html">Super Product of the Year</a></td>
-            <td>
-            	<a class="btn btn-success" href=""><i class="icon-thumbs-up"></i> 235</a>
-            	<a class="btn" href=""><i class="icon-thumbs-down"></i> 28</a>
-            </td>
-          </tr>
-          <tr>
-            <td>12/18/2012 5:40am</td>
-            <td><a href="details.html">Crappy Crawdads Unite</a></td>
-            <td>
-            	<a class="btn" href=""><i class="icon-thumbs-up"></i> 235</a>
-            	<a class="btn btn-danger" href=""><i class="icon-thumbs-down"></i> 28</a>
-            </td>
-          </tr>
-          <tr>
-            <td>12/13/2012 6:00pm</td>
-            <td><a href="details.html">Crazy Town is calling</a></td>
-            <td>
-            	<a class="btn btn-success" href=""><i class="icon-thumbs-up"></i> 235</a>
-            	<a class="btn btn-danger" href=""><i class="icon-thumbs-down"></i> 28</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <form class="form-horizontal">
+        <legend>Create Your New <span class="brand">Prod!c</span></legend>
+        <fieldset>
+          <div class="control-group">
+            <label class="control-label" for="input01">Name</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="input01">
+              <p class="help-block">Enter the name of your new <span class="brand">Prod!c</span> here</p>
+            </div>
+          </div>
+          
+          <div class="control-group">
+            <label class="control-label" for="textarea">Description</label>
+            <div class="controls">
+              <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
+              <p class="help-block">Tell your adoring fans why this thing will change the world as we know it. Please use small words.</p>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save changes</button>
+            <button class="btn">Cancel</button>
+          </div>
+        </fieldset>
+      </form>
 
     </div> <!-- /container -->
 

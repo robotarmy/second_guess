@@ -1,0 +1,62 @@
+@import "bootstrap/bootstrap.less";
+@import "font-awesome.less";
+
+@brandColor: 			lighten(#7a1a35, 10%);
+@brandColorDarkShadow: 	darken(#7a1a35, 30%);
+@brandColorLiteShadow: 	lighten(#000, 90%);
+
+.brand {
+	color: @brandColor;
+	text-shadow: -1px -1px 0 @brandColorLiteShadow;
+}
+
+.navbar {
+	a.brand {
+		color: darken(#fff,10%);
+		text-shadow: -1px -1px 0 #000;
+
+		span {
+			color: @brandColor;
+			text-shadow: -1px -1px 0 @brandColorDarkShadow;
+		}
+	}
+}
+
+.container {
+	position: relative;
+
+	.vote {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+table {
+	thead {
+		th {
+			&.created { width: 20%; }
+			&.name { width: auto; }
+			&.actions { width: auto; } 
+		}
+	}
+
+	tbody {
+		td:last-child {
+			text-align: right;
+			white-space:nowrap;
+		}
+	}
+}
+
+// Phones only
+@media (max-width: 767px) {
+  .container {
+	.vote {
+		position: relative;
+		top: 0;
+		right: 0;
+	}
+}
+
+}
