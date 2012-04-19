@@ -21,9 +21,9 @@
           <a class="brand" href="index.html">ur.<span>prod!c</span></a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="create.html">Create</a></li>
-              <li><a href="auth.html">Auth</a></li>
+              <li class="active"><a href="auth.html">Auth</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -32,44 +32,36 @@
 
 
     <div class="container">
+      <form class="form-horizontal">
+        <legend>Get Started Creating <span class="brand">Prod!cs</span></legend>
+        <fieldset>
+          <div class="control-group">
+            <label class="control-label" for="input01">Email</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="input01">
+            </div>
+          </div>
+          
+          <div class="control-group">
+            <label class="control-label" for="input01">Password</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="input01">
+            </div>
+          </div>
 
-      <h1>Recent <span class="brand">Prod!cs</span></h1>
-      
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th class="created">Created</th>
-            <th class="name">Product Name</th>
-            <th class="actions">&nbsp;</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>12/20/2012 2:30pm</td>
-            <td><a href="details.html">Super Product of the Year</a></td>
-            <td>
-            	<a class="btn btn-success" href=""><i class="icon-thumbs-up"></i> 235</a>
-            	<a class="btn" href=""><i class="icon-thumbs-down"></i> 28</a>
-            </td>
-          </tr>
-          <tr>
-            <td>12/18/2012 5:40am</td>
-            <td><a href="details.html">Crappy Crawdads Unite</a></td>
-            <td>
-            	<a class="btn" href=""><i class="icon-thumbs-up"></i> 235</a>
-            	<a class="btn btn-danger" href=""><i class="icon-thumbs-down"></i> 28</a>
-            </td>
-          </tr>
-          <tr>
-            <td>12/13/2012 6:00pm</td>
-            <td><a href="details.html">Crazy Town is calling</a></td>
-            <td>
-            	<a class="btn btn-success" href=""><i class="icon-thumbs-up"></i> 235</a>
-            	<a class="btn btn-danger" href=""><i class="icon-thumbs-down"></i> 28</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+          <div class="control-group">
+            <label class="control-label" for="input01">Confirm</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="input01">
+              <p class="help-block">Optional: Only needed if you want to create a new account</p>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+        </fieldset>
+      </form>
 
     </div> <!-- /container -->
 
