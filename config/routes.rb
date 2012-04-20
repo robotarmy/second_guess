@@ -1,6 +1,4 @@
 NAMEThisApp::Application.routes.draw do
-  resources :votes
-
   resources :products
 
   devise_for :users
