@@ -1,67 +1,16 @@
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>ur.prod!c</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/style.css" rel="stylesheet">
-    <style> body { padding-top: 60px; } </style>
-    <link href="/css/style-responsive.css" rel="stylesheet">
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
+<html>
+<head>
+  <title>NAMEThisApp</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= link_to "SignOut",
+    destroy_user_session_path(),
+    :method => :delete %>
+<%= yield %>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="/index.html">ur.<span>prod!c</span></a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class="active"><a href="/index.html">Home</a></li>
-              <li>
-              <%=link_to "Create"  , new_product_path() %>
-              </li>
-              
-              <li><a href="/auth.html">Auth</a></li>
-              <li><%= link_to "SignOut",
-                      destroy_user_session_path(),
-                      :method => :delete %>
-              </li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
-
-    <div class="container">
-
-    <%= yield %>
-  </div>
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap/bootstrap-transition.js"></script>
-    <script src="/js/bootstrap/bootstrap-alert.js"></script>
-    <script src="/js/bootstrap/bootstrap-modal.js"></script>
-    <script src="/js/bootstrap/bootstrap-dropdown.js"></script>
-    <script src="/js/bootstrap/bootstrap-scrollspy.js"></script>
-    <script src="/js/bootstrap/bootstrap-tab.js"></script>
-    <script src="/js/bootstrap/bootstrap-tooltip.js"></script>
-    <script src="/js/bootstrap/bootstrap-popover.js"></script>
-    <script src="/js/bootstrap/bootstrap-button.js"></script>
-    <script src="/js/bootstrap/bootstrap-collapse.js"></script>
-    <script src="/js/bootstrap/bootstrap-carousel.js"></script>
-    <script src="/js/bootstrap/bootstrap-typeahead.js"></script>
-  </body>
+</body>
 </html>
-
