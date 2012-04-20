@@ -7,8 +7,10 @@ gem 'rails', '3.2.3'
 gem 'devise'
 group :development, :test do
 gem 'sqlite3'
+
 gem 'rspec-rails'
 end
+gem "twitter-bootstrap-rails"
 group :production do
   gem 'pg'
 end
