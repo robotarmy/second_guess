@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Product do
-  it "has a vote count works with positive" do
+  it "has a vote count works with negative" do
     user = User.create(
             :email => 'c@r9.c',
             :password => 'hihihi',
@@ -24,6 +24,7 @@ describe Product do
     p.votes.create(:user_id => user.id, :value => 1)
     p.positive_vote_count.should == 2
   end
+
   it "has a creator " do
     user = User.create(
             :email => 'c@r9.c',
